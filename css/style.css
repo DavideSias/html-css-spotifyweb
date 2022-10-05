@@ -73,13 +73,13 @@ li .nav-link{
 }
 
 
-.recently-text{
+.main-text{
     font-size: 27px;
     font-weight: 800;
-    margin-bottom: 2rem;
 }
 
 .card-container{
+    margin: 2rem 0;
     display: flex;
     gap: 1rem;
 }
@@ -98,19 +98,32 @@ li .nav-link{
     font-weight: 700;
 }
 
-.card .artist{
+.subtitle{
     font-size: 13px;
     font-weight: 600;
     color: gray;
 }
 
-.recently-img{
+.cover-img{
     width: 100%;
+}
+
+.cover-img.circle-img{
+    border-radius: 50%;
 }
 
 
 
 /* media query */
+
+@media screen and (max-width: 961px) {
+    .nav-list{
+        flex-wrap: wrap;
+        row-gap: 2rem;
+    }
+    
+}
+
 @media screen and (max-width: 876px) {
 
     .card-container{
@@ -143,3 +156,4 @@ li .nav-link{
         width: calc(100vw - 40px);
     }
 }
+
