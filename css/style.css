@@ -3,3 +3,25 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.big-container{
+    display: flex;
+}
+
+.sidebar{
+    flex-basis: 250px;
+    background-color: black;
+}
+
+.main-content{
+    height: 100%;
+    flex-basis: calc(100vw - 250px);
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+    background-color: rgb(20, 25, 34);
+}
+
+.play-nav{
+    background-color: rgb(40, 40, 40);
+    height: 100px;
+}
