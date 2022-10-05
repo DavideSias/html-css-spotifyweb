@@ -6,6 +6,11 @@
 
 /* general style */
 
+html{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
 .play-nav{
     background-color: rgb(40, 40, 40);
     height: 100px;
@@ -33,6 +38,8 @@
     background-color: black;
 }
 
+/* main section */
+
 .main-content{
     height: 100%;
     flex-basis: calc(100vw - 250px);
@@ -44,8 +51,32 @@
 .content-container{
     max-width: 97%;
     margin: 90px auto 0;
-    height: 100%;
-    background-color: aqua;
+}
+
+.nav-list{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.nav-list li{
+    list-style: none;
+}
+
+li .nav-link{
+    margin: 0 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: gray;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+.recently-text{
+    font-size: 27px;
+    font-weight: 800;
+    margin-bottom: 2rem;
 }
 
 .card-container{
@@ -56,7 +87,25 @@
 .card {
     width: 15%;
     aspect-ratio: 1 / 1;
-    background-color: green;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+}
+
+.card .album{
+    margin: 0.5rem 0;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.card .artist{
+    font-size: 13px;
+    font-weight: 600;
+    color: gray;
+}
+
+.recently-img{
+    width: 100%;
 }
 
 
