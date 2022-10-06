@@ -23,13 +23,15 @@ html{
 
 .upgrade-bar{
     width: calc(100vw - 230px);
-    height: 70px;
-    background-color: black;
-    opacity: 0.5;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
     right: 0;
     z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .big-container{
@@ -54,6 +56,20 @@ html{
 
 .logo{
     width: 130px;
+}
+
+.logo-small{
+    width: 20px;
+}
+
+.home-small,
+.search-small,
+.libreria-small{
+    width: 20px;
+}
+
+.xs-sidebar{
+    display: none;
 }
 
 .sidebar-list{
@@ -144,6 +160,7 @@ html{
 .install .download{
     font-size: 12px;
     font-weight: 700;
+    text-decoration: none;
     color: gray;
 }
 
@@ -161,7 +178,6 @@ html{
     font-weight: 700;
 }
 
-
 /* main section */
 
 .main-content{
@@ -174,7 +190,7 @@ html{
 
 .content-container{
     max-width: 97%;
-    margin: 90px auto 0;
+    margin: 110px auto 0;
 }
 
 .nav-list{
@@ -230,8 +246,22 @@ li .nav-link{
     color: gray;
 }
 
+.hidden{
+    position: relative;
+}
+
 .cover-img{
     width: 100%;
+}
+
+.nascosta{
+    position: absolute;
+    font-size: 50px;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    opacity: 0;
 }
 
 .cover-img.circle-img{
@@ -347,6 +377,61 @@ li .nav-link{
     width: 90px;
 }
 
+/* upgrade section */
+
+.upgrade{
+    position: absolute;
+    right: 2em;
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid white;
+    border-radius: 25px;
+}
+
+/* hover style */
+
+a:hover{
+    color: white;
+}
+
+li .sidebar-element:hover{
+    color: white;
+}
+
+.card:hover .nascosta{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.card:hover .cover-img{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.install .download:hover{
+    color: white;
+}
+
+.bar-bottom-container a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.favorite-play .left-icon:hover{
+    color: white;
+}
+
+.icon-container .icon-play:hover{
+    transform: scale(1.2);
+}
+
+.upgrade:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
 @media screen and (max-width: 876px) {
 
     .card-container{
@@ -377,6 +462,23 @@ li .nav-link{
 
     .upgrade-bar{
         width: calc(100vw - 40px);
+    }
+
+    .xs-sidebar{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .user-install .install{
+        border-bottom: 1px solid black;
+    }
+
+    .logo,
+    .sidebar-list,
+    .download,
+    .name{
+        display: none;
     }
 }
 
