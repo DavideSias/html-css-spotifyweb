@@ -7,7 +7,7 @@
 /* general style */
 
 html{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: white;
 }
 
@@ -17,7 +17,7 @@ html{
 }
 
 .upgrade-bar{
-    width: calc(100vw - 250px);
+    width: calc(100vw - 230px);
     height: 70px;
     background-color: black;
     opacity: 0.5;
@@ -31,18 +31,31 @@ html{
     display: flex;
 }
 
-/* content style */
+/* sidebar style */
 
 .sidebar{
-    flex-basis: 250px;
+    flex-basis: 230px;
     background-color: black;
+}
+
+.sidebar-container{
+    display: flex;
+    height: 93%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+
+.logo{
+    margin: 1rem 1.5rem 0;
+    width: 130px;
 }
 
 /* main section */
 
 .main-content{
     height: 100%;
-    flex-basis: calc(100vw - 250px);
+    flex-basis: calc(100vw - 230px);
     height: calc(100vh - 100px);
     overflow-y: auto;
     background-color: rgb(20, 25, 34);
@@ -55,6 +68,8 @@ html{
 
 .nav-list{
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 2rem;
     justify-content: center;
     margin-bottom: 2rem;
 }
@@ -112,17 +127,110 @@ li .nav-link{
     border-radius: 50%;
 }
 
-
-
-/* media query */
-
-@media screen and (max-width: 961px) {
-    .nav-list{
-        flex-wrap: wrap;
-        row-gap: 2rem;
-    }
-    
+.sidebar-list{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
 }
+
+.sidebar-list li, a{
+    display: inline-block;
+}
+
+.sidebar-list li{
+    list-style: none;
+    padding-bottom: 0.5rem;
+}
+
+.sidebar-list .sidebar-element{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    color: gray;
+}
+
+.sidebar-list .home::before{
+    content: url('../img/home.svg');
+    display: inline-block;
+    width: 25px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.sidebar-list .search::before{
+    content: url('../img/search.svg');
+    display: inline-block;
+    width: 25px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.sidebar-list .my-library::before{
+    content: url('../img/libreria.svg');
+    display: inline-block;
+    width: 25px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.sidebar-list .playlist{
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: white;
+}
+
+.sidebar-list .plus::before{
+    content: "\2b";
+    display: inline-block;
+    margin-right: 10px;
+    padding: 0.5rem 0.6rem;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 20px;
+    background-color: gray;
+    color: black;
+    vertical-align: middle;
+}
+
+.sidebar-list .sidebar-element.plus{
+    font-size: 15px;
+} 
+
+.sidebar-list .name-playlist{
+    padding: 0.3rem 0;
+}
+
+.user-install .install{
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid gray;
+}
+
+.install .install-img{
+    width: 15px;
+    vertical-align: middle;
+}
+
+.install .download{
+    font-size: 12px;
+    font-weight: 700;
+    color: gray;
+}
+
+.username .user-img{
+    background-color: grey;
+    width: 20px;
+    border-radius: 20px;
+    vertical-align: middle;
+    margin: 1rem 0;
+}
+
+.username .name{
+    font-size: 14px;
+    font-weight: 700;
+}
+
 
 @media screen and (max-width: 876px) {
 
