@@ -69,9 +69,16 @@ html{
 }
 
 .home-green{
-    border-left: 5px solid rgb(173, 255, 47);
-    margin-left: -1rem;
-    padding-left: 0.7rem;
+    position: relative;
+}
+
+.home-green::before{
+    content: "";
+    position: absolute;
+    left: -16px;
+    bottom: 8px;
+    height: 35px;
+    border-left: 4px solid rgb(173, 255, 47);
 }
 
 .xs-sidebar{
